@@ -266,7 +266,7 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_nonce&dev=1&controller=Posts
 
 ### 使用令牌发布私密 ###
 
-URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=posts/create_post&dev=1&nonce=059aab62f4&status=publish&title=%E7%A7%98%E5%AF%86&content=%E6%98%8E%E5%A4%A9%E4%BD%A0%E8%A6%81%E7%9C%8B%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%AF%EF%BC%9F](https://gdmcmm-jqmobile.rhcloud.com/?json=posts/create_post&dev=1&nonce=059aab62f4&status=publish&title=%E7%A7%98%E5%AF%86&content=%E6%98%8E%E5%A4%A9%E4%BD%A0%E8%A6%81%E7%9C%8B%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%AF%EF%BC%9F)
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=posts/create_post&dev=1&nonce=059aab62f4&status=publish&like_num=0&title=%E7%A7%98%E5%AF%86&content=%E6%98%8E%E5%A4%A9%E4%BD%A0%E8%A6%81%E7%9C%8B%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%AF%EF%BC%9F](https://gdmcmm-jqmobile.rhcloud.com/?json=posts/create_post&dev=1&nonce=059aab62f4&status=publish&like_num=0&title=%E7%A7%98%E5%AF%86&content=%E6%98%8E%E5%A4%A9%E4%BD%A0%E8%A6%81%E7%9C%8B%E7%9A%84%E9%A1%B9%E7%9B%AE%E6%98%AF%EF%BC%9F)
 
 示例：
 
@@ -325,4 +325,45 @@ URL: [http://gdmcmm.tk/?json=respond/submit_comment&dev=1&post_id=27&content=我
   "date": "2014-04-10 11:10:45",
   "content": "我喜欢秘密",
   "parent": 4
+}
+
+## 查询喜欢 ##
+
+URL: [http://gdmcmm.tk/?json=posts/get_post_like&dev=1&blog_id=34](http://gdmcmm.tk/?json=posts/get_post_like&dev=1&blog_id=34)
+
+说明：
+
+- blog_id 为秘密id
+
+示例：
+
+{
+  "status": "ok",
+  "like_num": "0"
+}
+
+## 喜欢 ##
+
+### 获取令牌 ###
+
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_nonce&dev=1&controller=Posts&method=updata_post_like](https://gdmcmm-jqmobile.rhcloud.com/?json=get_nonce&dev=1&controller=Posts&method=updata_post_like)
+
+示例：
+
+{
+  "status": "ok",
+  "controller": "posts",
+  "method": "updata_post_like",
+  "nonce": "1ecbb864e5"
+}
+
+### 更新喜欢 ###
+
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=posts/update_post_like&dev=1&blog_id=34&nonce=8797a64616&like_num=1](https://gdmcmm-jqmobile.rhcloud.com/?json=posts/update_post_like&dev=1&blog_id=34&nonce=8797a64616&like_num=1)
+
+示例：
+
+{
+  "status": "ok",
+  "like_num": "1"
 }
