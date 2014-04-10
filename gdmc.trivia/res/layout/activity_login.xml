@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    	<include 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    layout="@layout/header_login"
+	    />
+	
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1px"
+	    android:background="#cccccc"
+	    />
+	
+    <EditText
+        android:id="@+id/login_et_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="手机号码"
+        android:background="@drawable/edittext_default"
+        android:singleLine="true" >
+        
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/login_et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="密码"
+        android:background="@drawable/edittext_default"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/login_bt_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:text="登录" />
+
+    <Button
+        android:id="@+id/login_bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:text="注册" />
+
+</LinearLayout>
