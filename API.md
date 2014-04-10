@@ -59,7 +59,7 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_nonce&dev=1&controller=Users
 
 ### 使用令牌创建用户 ###
 
-URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=users/create_user&dev=1&u=管理员用户名&p=管理员密码&user_login=新的用户名&user_password=密码&user_email=新用户邮箱&nonce=令牌](https://gdmcmm-jqmobile.rhcloud.com/?json=users/create_user&dev=1&u=管理员用户名&p=管理员密码&user_login=新的用户名&user_password=密码&user_email=新用户邮箱&nonce=令牌)
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=users/create_user&dev=1&u=管理员用户名&p=管理员密码&user_login=新的用户名&user_password=密码&user_email=新用户邮箱&nonce=令牌&role=author](https://gdmcmm-jqmobile.rhcloud.com/?json=users/create_user&dev=1&u=管理员用户名&p=管理员密码&user_login=新的用户名&user_password=密码&user_email=新用户邮箱&nonce=令牌&role=author)
 
 示例：
 
@@ -150,7 +150,7 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_posts&dev=1](https://gdmcmm-
 
 ## 获取秘密 ##
 
-URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_post&dev=1&id=私密id](https://gdmcmm-jqmobile.rhcloud.com/?json=get_post&dev=1&id=私密id)
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_post&dev=1&id=私密id&custom_fields=like_num](https://gdmcmm-jqmobile.rhcloud.com/?json=get_post&dev=1&id=私密id&custom_fields=like_num)
 
 示例：
 	
@@ -302,3 +302,27 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=posts/create_post&dev=1&nonce=05
 	    "comment_status": "open"
 	  }
 	}
+
+
+## 用户评论 ##
+
+URL: [http://gdmcmm.tk/?json=respond/submit_comment&dev=1&post_id=27&content=我喜欢秘密&name=admin&email=summit_mail@qq.com&comment_parent=4](http://gdmcmm.tk/?json=respond/submit_comment&dev=1&post_id=27&content=我喜欢秘密&name=admin&email=summit_mail@qq.com&comment_parent=4)
+
+说明：
+
+- post_id: 秘密id
+- content: 评论内容
+- name: 评论的用户名
+- email: 评论的用户邮箱
+- comment_parent: 可选，若是回复别人的评论，这里加入之前的评论id
+
+示例：
+{
+  "status": "ok",
+  "id": 8,
+  "name": "test",
+  "url": "",
+  "date": "2014-04-10 11:10:45",
+  "content": "我喜欢秘密",
+  "parent": 4
+}
