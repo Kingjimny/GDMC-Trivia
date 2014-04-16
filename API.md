@@ -97,7 +97,7 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=users/create_user&dev=1&u=管理
 
 ## 获取所有秘密 ##
 
-URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_posts&dev=1](https://gdmcmm-jqmobile.rhcloud.com/?json=get_posts&dev=1)
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_posts&dev=1&custom_fields=like_num](https://gdmcmm-jqmobile.rhcloud.com/?json=get_posts&dev=1&custom_fields=like_num)
 
 示例：
 
