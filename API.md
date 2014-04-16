@@ -317,15 +317,16 @@ URL: [http://gdmcmm.tk/?json=respond/submit_comment&dev=1&post_id=27&content=我
 - comment_parent: 可选，若是回复别人的评论，这里加入之前的评论id
 
 示例：
-{
-  "status": "ok",
-  "id": 8,
-  "name": "test",
-  "url": "",
-  "date": "2014-04-10 11:10:45",
-  "content": "我喜欢秘密",
-  "parent": 4
-}
+
+	{
+	  "status": "ok",
+	  "id": 8,
+	  "name": "test",
+	  "url": "",
+	  "date": "2014-04-10 11:10:45",
+	  "content": "我喜欢秘密",
+	  "parent": 4
+	}
 
 ## 查询喜欢 ##
 
@@ -337,10 +338,10 @@ URL: [http://gdmcmm.tk/?json=posts/get_post_like&dev=1&blog_id=34](http://gdmcmm
 
 示例：
 
-{
-  "status": "ok",
-  "like_num": "0"
-}
+	{
+	  "status": "ok",
+	  "like_num": "0"
+	}
 
 ## 喜欢 ##
 
@@ -350,12 +351,12 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=get_nonce&dev=1&controller=Posts
 
 示例：
 
-{
-  "status": "ok",
-  "controller": "posts",
-  "method": "updata_post_like",
-  "nonce": "1ecbb864e5"
-}
+	{
+	  "status": "ok",
+	  "controller": "posts",
+	  "method": "updata_post_like",
+	  "nonce": "1ecbb864e5"
+	}
 
 ### 更新喜欢 ###
 
@@ -363,7 +364,53 @@ URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=posts/update_post_like&dev=1&blo
 
 示例：
 
-{
-  "status": "ok",
-  "like_num": "1"
-}
+	{
+	  "status": "ok",
+	  "like_num": "1"
+	}
+
+
+## 获取用户信息 ##
+URL: [https://gdmcmm-jqmobile.rhcloud.com/?json=users/get_userdata&dev=1&id=1](https://gdmcmm-jqmobile.rhcloud.com/?json=users/get_userdata&dev=1&id=1)
+
+示例：
+
+	{
+	  "status": "ok",
+	  "user": {
+	    "data": {
+	      "ID": "2",
+	      "user_login": "test",
+	      "user_pass": "$P$BqScCH5DdB0AWONAC9BqoJYayWiZHT.",
+	      "user_nicename": "test",
+	      "user_email": "test@qq.com",
+	      "user_url": "",
+	      "user_registered": "2014-04-04 15:17:08",
+	      "user_activation_key": "",
+	      "user_status": "0",
+	      "display_name": "test"
+	    },
+	    "ID": 2,
+	    "caps": {
+	      "author": true
+	    },
+	    "cap_key": "wp_capabilities",
+	    "roles": [
+	      "author"
+	    ],
+	    "allcaps": {
+	      "upload_files": true,
+	      "edit_posts": true,
+	      "edit_published_posts": true,
+	      "publish_posts": true,
+	      "read": true,
+	      "level_2": true,
+	      "level_1": true,
+	      "level_0": true,
+	      "delete_posts": true,
+	      "delete_published_posts": true,
+	      "author": true
+	    },
+	    "filter": null
+	  }
+	}
