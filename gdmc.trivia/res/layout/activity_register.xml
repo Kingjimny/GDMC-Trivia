@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+	<include 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    layout="@layout/header_register"
+	    />
+	
+	<View 
+	    android:layout_width="fill_parent"
+	    android:layout_height="1px"
+	    android:background="#cccccc"
+	    />
+    <EditText
+        android:id="@+id/register_et_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="手机号码"
+        android:background="@drawable/edittext_default"
+        android:singleLine="true" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/register_et_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="密码"
+        android:background="@drawable/edittext_default"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/register_et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="邮箱"
+        android:background="@drawable/edittext_default"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:text="请注意：邮箱是作为找回密码的主要依据！" />
+
+    <Button
+        android:id="@+id/register_bt_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="16dp"
+        android:text="注册" />
+
+</LinearLayout>
